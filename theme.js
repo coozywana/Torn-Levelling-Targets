@@ -1,11 +1,1 @@
-// It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
-const storedTheme = localStorage.getItem('theme');
-const systemTheme = window.matchMedia('(prefers-color-scheme: Dark)').matches ? 'Dark' : 'Light';
-
-if (storedTheme === 'Dark' || (storedTheme === 'system' && systemTheme === 'Dark')) {
-  document.documentElement.classList.add('dark');
-  console.log('Dark mode enabled', storedTheme);
-} else {
-  document.documentElement.classList.remove('dark');
-  console.log('Dark mode disabled', storedTheme);
-}
+const _0x5e2c82=_0x18e1;function _0x1397(){const _0x454d23=['945980ECCCtd','matches','7307001KVTRgp','(prefers-color-scheme:\x20Dark)','Dark','log','matchMedia','dark','remove','Dark\x20mode\x20disabled','4vseGzv','248QeDBlY','classList','add','2088180yocMOh','1375734tUOceM','documentElement','1731822YQQDcD','getItem','365795ivivmv','239736ulNspH','Dark\x20mode\x20enabled','theme'];_0x1397=function(){return _0x454d23;};return _0x1397();}(function(_0x4f9839,_0xc0d834){const _0x5f5944=_0x18e1,_0x49cf2f=_0x4f9839();while(!![]){try{const _0x59d2cd=-parseInt(_0x5f5944(0xb8))/0x1+parseInt(_0x5f5944(0xb2))/0x2+parseInt(_0x5f5944(0xaf))/0x3+parseInt(_0x5f5944(0xc2))/0x4*(parseInt(_0x5f5944(0xb4))/0x5)+parseInt(_0x5f5944(0xb0))/0x6+parseInt(_0x5f5944(0xb5))/0x7*(-parseInt(_0x5f5944(0xac))/0x8)+parseInt(_0x5f5944(0xba))/0x9;if(_0x59d2cd===_0xc0d834)break;else _0x49cf2f['push'](_0x49cf2f['shift']());}catch(_0x21564d){_0x49cf2f['push'](_0x49cf2f['shift']());}}}(_0x1397,0xa33e0));function _0x18e1(_0x2ca697,_0x5a6ff4){const _0x139797=_0x1397();return _0x18e1=function(_0x18e181,_0x5ac4b9){_0x18e181=_0x18e181-0xac;let _0x37373c=_0x139797[_0x18e181];return _0x37373c;},_0x18e1(_0x2ca697,_0x5a6ff4);}const storedTheme=localStorage[_0x5e2c82(0xb3)](_0x5e2c82(0xb7)),systemTheme=window[_0x5e2c82(0xbe)](_0x5e2c82(0xbb))[_0x5e2c82(0xb9)]?_0x5e2c82(0xbc):'Light';storedTheme===_0x5e2c82(0xbc)||storedTheme==='system'&&systemTheme==='Dark'?(document[_0x5e2c82(0xb1)][_0x5e2c82(0xad)][_0x5e2c82(0xae)](_0x5e2c82(0xbf)),console['log'](_0x5e2c82(0xb6),storedTheme)):(document[_0x5e2c82(0xb1)][_0x5e2c82(0xad)][_0x5e2c82(0xc0)](_0x5e2c82(0xbf)),console[_0x5e2c82(0xbd)](_0x5e2c82(0xc1),storedTheme));
