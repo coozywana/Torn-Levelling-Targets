@@ -1,1 +1,11 @@
-const _0x4de9ee=_0x31f6;function _0x31f6(_0x5df53f,_0x2a48cf){const _0x3d4cdd=_0x3d4c();return _0x31f6=function(_0x31f653,_0x5eb790){_0x31f653=_0x31f653-0xc2;let _0x113a94=_0x3d4cdd[_0x31f653];return _0x113a94;},_0x31f6(_0x5df53f,_0x2a48cf);}function _0x3d4c(){const _0x59bdeb=['11094921dljijB','Dark\x20mode\x20enabled','4950768WqXieM','classList','matches','1651920zqLHPM','2403357mMoHcD','2OehklB','matchMedia','10zsdbXJ','602296HyNIYW','Light','251488PPGOoC','Dark','Dark\x20mode\x20disabled','System','getItem','documentElement','9271129RUMbyp','log'];_0x3d4c=function(){return _0x59bdeb;};return _0x3d4c();}(function(_0x704055,_0x534e78){const _0x569f29=_0x31f6,_0xf8eb6=_0x704055();while(!![]){try{const _0x18f6b1=-parseInt(_0x569f29(0xca))/0x1*(-parseInt(_0x569f29(0xcd))/0x2)+-parseInt(_0x569f29(0xc9))/0x3+-parseInt(_0x569f29(0xcf))/0x4*(-parseInt(_0x569f29(0xcc))/0x5)+parseInt(_0x569f29(0xc8))/0x6+parseInt(_0x569f29(0xd5))/0x7+parseInt(_0x569f29(0xc5))/0x8+-parseInt(_0x569f29(0xc3))/0x9;if(_0x18f6b1===_0x534e78)break;else _0xf8eb6['push'](_0xf8eb6['shift']());}catch(_0x2aa8f2){_0xf8eb6['push'](_0xf8eb6['shift']());}}}(_0x3d4c,0xded7d));const storedTheme=localStorage[_0x4de9ee(0xd3)]('theme'),systemTheme=window[_0x4de9ee(0xcb)]('(prefers-color-scheme:\x20Dark)')[_0x4de9ee(0xc7)]?_0x4de9ee(0xd0):_0x4de9ee(0xce);storedTheme===_0x4de9ee(0xd0)||storedTheme===_0x4de9ee(0xd2)&&systemTheme===_0x4de9ee(0xd0)?(document['documentElement'][_0x4de9ee(0xc6)]['add']('dark'),console[_0x4de9ee(0xc2)](_0x4de9ee(0xc4),storedTheme)):(document[_0x4de9ee(0xd4)][_0x4de9ee(0xc6)]['remove']('dark'),console['log'](_0x4de9ee(0xd1),storedTheme));
+// It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+const storedTheme = localStorage.getItem('theme');
+const systemTheme = window.matchMedia('(prefers-color-scheme: Dark)').matches ? 'Dark' : 'Light';
+
+if (storedTheme === 'Dark' || (storedTheme === 'System' && systemTheme === 'Dark')) {
+  document.documentElement.classList.add('dark');
+  console.log('Dark mode enabled', storedTheme);
+} else {
+  document.documentElement.classList.remove('dark');
+  console.log('Dark mode disabled', storedTheme);
+}

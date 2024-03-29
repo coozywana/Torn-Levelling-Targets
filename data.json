@@ -1,4 +1,46 @@
 {   
+    "testing list": [
+      {
+        "name": "crazydave",
+        "id": "320161",
+        "lvl": "35",
+        "total": "990",
+        "str": "234",
+        "def": "244",
+        "spd": "257",
+        "dex": "255"
+      },
+      {
+        "name": "maverick1972",
+        "id": "522960",
+        "lvl": "31",
+        "total": "396",
+        "str": "106",
+        "def": "107",
+        "spd": "99",
+        "dex": "84"
+      },
+      {
+        "name": "Mataifa",
+        "id": "488552",
+        "lvl": "31",
+        "total": "640",
+        "str": "292",
+        "def": "39",
+        "spd": "218",
+        "dex": "91"
+      },
+      {
+        "name": "fanpi017",
+        "id": "810355",
+        "lvl": "30",
+        "total": "654",
+        "str": "195",
+        "def": "138",
+        "spd": "146",
+        "dex": "175"
+      }
+    ],
     "Baldr's List 1": [
       {
         "name": "crazydave",

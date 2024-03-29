@@ -1,1 +1,65 @@
-const _0x329b58=_0x5b7c;function _0x5b7c(_0x540af9,_0x70741b){const _0x3291ec=_0x3291();return _0x5b7c=function(_0x5b7cb3,_0x3e5b85){_0x5b7cb3=_0x5b7cb3-0x131;let _0x130626=_0x3291ec[_0x5b7cb3];return _0x130626;},_0x5b7c(_0x540af9,_0x70741b);}function _0x3291(){const _0x1d7a7f=['2436lTogfi','value','6ydheYb','api-key','toast-danger','style','toast-success','none','3335535kKHWaN','addEventListener','api-key-form','trim','125448tSFOFS','display','appearance','theme-form','3741256coUwyM','remove','preventDefault','12QHpqkr','opacity-0','theme','apiKey','4174890QhccLy','109mepDds','flex','setItem','getElementById','DOMContentLoaded','classList','7pXYJlT','990066FHmInR','submit','1473645mdKMKv'];_0x3291=function(){return _0x1d7a7f;};return _0x3291();}(function(_0x5c7f3c,_0x21c8a8){const _0x54b5f6=_0x5b7c,_0x4af1a4=_0x5c7f3c();while(!![]){try{const _0x1dd00f=parseInt(_0x54b5f6(0x139))/0x1*(-parseInt(_0x54b5f6(0x143))/0x2)+-parseInt(_0x54b5f6(0x14f))/0x3*(parseInt(_0x54b5f6(0x134))/0x4)+parseInt(_0x54b5f6(0x142))/0x5*(parseInt(_0x54b5f6(0x145))/0x6)+-parseInt(_0x54b5f6(0x13f))/0x7*(parseInt(_0x54b5f6(0x131))/0x8)+parseInt(_0x54b5f6(0x14b))/0x9+parseInt(_0x54b5f6(0x138))/0xa+-parseInt(_0x54b5f6(0x140))/0xb;if(_0x1dd00f===_0x21c8a8)break;else _0x4af1a4['push'](_0x4af1a4['shift']());}catch(_0x16bc9c){_0x4af1a4['push'](_0x4af1a4['shift']());}}}(_0x3291,0x412d0),document[_0x329b58(0x14c)](_0x329b58(0x13d),function(){const _0x7454fa=_0x329b58,_0x317259=document['getElementById'](_0x7454fa(0x14d)),_0x595320=document[_0x7454fa(0x13c)](_0x7454fa(0x152)),_0x2c0a6f=document['getElementById'](_0x7454fa(0x149)),_0x351d32=document[_0x7454fa(0x13c)](_0x7454fa(0x147));_0x317259[_0x7454fa(0x14c)](_0x7454fa(0x141),function(_0x3fd4d7){const _0x2be77a=_0x7454fa;_0x3fd4d7['preventDefault']();const _0x1d5d45=document[_0x2be77a(0x13c)](_0x2be77a(0x146)),_0x29bc1b=_0x1d5d45[_0x2be77a(0x144)];_0x3757bc(_0x29bc1b),_0x29bc1b[_0x2be77a(0x14e)]()!==''?(_0x22d0f5(_0x2c0a6f),_0x5a70d3(_0x351d32)):(_0x22d0f5(_0x351d32),_0x5a70d3(_0x2c0a6f));}),_0x595320[_0x7454fa(0x14c)](_0x7454fa(0x141),function(_0x1eb380){const _0xf15612=_0x7454fa;_0x1eb380[_0xf15612(0x133)]();const _0xabd5f2=document[_0xf15612(0x13c)](_0xf15612(0x151)),_0x1fd886=_0xabd5f2['value'];_0x296dea(_0x1fd886),_0x22d0f5(_0x2c0a6f),_0x5a70d3(_0x351d32);});function _0x3757bc(_0x3e10b4){const _0xf0b51c=_0x7454fa;localStorage[_0xf0b51c(0x13b)](_0xf0b51c(0x137),_0x3e10b4);}function _0x296dea(_0x4f107b){const _0x36ba3b=_0x7454fa;localStorage[_0x36ba3b(0x13b)](_0x36ba3b(0x136),_0x4f107b);}function _0x22d0f5(_0x5e7470){const _0x51d0c3=_0x7454fa;_0x5e7470['style'][_0x51d0c3(0x150)]=_0x51d0c3(0x13a),_0x5e7470[_0x51d0c3(0x13e)][_0x51d0c3(0x132)](_0x51d0c3(0x135));}function _0x5a70d3(_0xc464ae){const _0x367e6d=_0x7454fa;_0xc464ae[_0x367e6d(0x148)][_0x367e6d(0x150)]=_0x367e6d(0x14a);}}));
+document.addEventListener('DOMContentLoaded', function() {
+    const apiKeyForm = document.getElementById('api-key-form');
+    const themeForm = document.getElementById('theme-form');
+    const toastSuccess = document.getElementById('toast-success');
+    const toastDanger = document.getElementById('toast-danger');
+
+    apiKeyForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get the API key from the input field
+        const apiKeyInput = document.getElementById('api-key');
+        const apiKey = apiKeyInput.value;
+        applyAPIKey(apiKey);
+        // Simulate success/failure based on the value of the API key
+        if (apiKey.trim() !== '') {
+            // Show success toast
+            showToast(toastSuccess);
+            hideToast(toastDanger);
+        } else {
+            // Show failure toast
+            showToast(toastDanger);
+            hideToast(toastSuccess);
+        }
+    });
+
+    themeForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get the selected theme from the select input
+        const themeSelect = document.getElementById('appearance');
+        const selectedTheme = themeSelect.value;
+
+        // Apply the selected theme
+        applyTheme(selectedTheme);
+
+        // Show success toast
+        showToast(toastSuccess);
+        hideToast(toastDanger);
+    });
+
+    // Function to apply selected API key
+    function applyAPIKey(apiKey) {
+        // Save the selected API key to local storage
+        localStorage.setItem('apiKey', apiKey);
+        // Implement API key application logic here...
+    }
+
+    // Function to apply selected theme
+    function applyTheme(theme) {
+        // Save the selected theme to local storage
+        localStorage.setItem('theme', theme);
+        // Implement theme application logic here...
+    }
+
+    // Function to show toast
+    function showToast(toast) {
+        toast.style.display = 'flex'; // Set display property to flex
+        toast.classList.remove('opacity-0'); // Remove TailwindCSS opacity class
+    }
+
+    // Function to hide toast
+    function hideToast(toast) {
+        toast.style.display = 'none'; // Hide toast
+    }
+});
