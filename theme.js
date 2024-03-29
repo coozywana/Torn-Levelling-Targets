@@ -2,7 +2,7 @@
 const storedTheme = localStorage.getItem('theme');
 const systemTheme = window.matchMedia('(prefers-color-scheme: Dark)').matches ? 'Dark' : 'Light';
 
-if (storedTheme === 'Dark' || (storedTheme === 'system' && systemTheme === 'Dark')) {
+if (storedTheme === 'Dark' || (storedTheme === 'System' && systemTheme === 'Dark')) {
   document.documentElement.classList.add('dark');
   console.log('Dark mode enabled', storedTheme);
 } else {
